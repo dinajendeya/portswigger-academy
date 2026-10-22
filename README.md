@@ -145,7 +145,7 @@ What a developer should change, with a short code example where useful.
 
 | Week | Focus | Labs | Links |
 |---|---|:---:|---|
-| 1 | SQL injection | 0 |  |
+| 1 | SQL injection | 7 |  |
 
 
 ## 📚 Resources I Use
