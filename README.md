@@ -87,65 +87,12 @@ portswigger-writeups/
 Each category folder has its own `README.md` with the big-picture lessons, and one file per lab.
 File names follow `NN-short-lab-name.md`.
 
-## 📝 Walkthrough Template
-
-Every lab write-up follows the same structure, so the notes stay consistent and easy to review.
-
-```markdown
-# Lab: <exact lab title>
-
-| | |
-|---|---|
-| **Category** | e.g. SQL injection |
-| **Difficulty** | Apprentice / Practitioner / Expert |
-| **Lab link** | <link> |
-| **Date solved** | YYYY-MM-DD |
-| **Tools used** | Burp Suite Proxy, Repeater |
-
-## 🎯 Goal
-One or two sentences on what the lab asks for.
-
-## 🧠 Concept
-The vulnerability in plain language, as if explaining it to a classmate.
-
-## 🔎 My approach
-1. What I noticed first
-2. What I tried and why
-3. What didn't work, and what that taught me
-
-## 💥 Exploitation (high level)
-The key idea of the exploit and the evidence that confirmed it.
-
-## 🧱 Root cause
-Why the application was vulnerable.
-
-## 🛡️ How to fix it
-What a developer should change, with a short code example where useful.
-
-## 📌 Lessons learned
-- What I'd check first next time
-- What I misunderstood before this lab
-
-## 🔗 References
-- PortSwigger learning path, OWASP page, etc.
-```
-
-### ✏️ Example entry (format only)
-
-> **Lab:** SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
-> **Difficulty:** Apprentice · **Tools:** Burp Suite Repeater
->
-> **My approach:** I noticed the category filter was reflected in the request, so I intercepted it and tested how the application handled unexpected input.
-> **Root cause:** user input was concatenated directly into the SQL query.
-> **Fix:** parameterized queries, so input is always treated as data, never as SQL.
-> **Lesson:** the bug is not the quote character. The bug is mixing data and code.
-
 ## 📊 Progress Tracker
 ### 📅 Study log
 
 | Week | Focus | Labs | Links |
 |---|---|:---:|---|
-| 1 | SQL injection | 7 |  |
+| 1 | SQL injection | 8 |  |
 
 
 ## 📚 Resources I Use
