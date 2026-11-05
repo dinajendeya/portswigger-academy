@@ -1,4 +1,4 @@
-# Lab 02:Using a SQL injection UNION attack to retrieve interesting data
+# Lab 02: Using a SQL injection UNION attack to retrieve interesting data
 
 ## Category
 SQL Injection - Union Attack
@@ -12,11 +12,17 @@ perform a SQL injection UNION attack that retrieves all usernames and passwords,
 
 2. Determine the number of columns that are being returned by the query and which columns contain text data. 
 
+![First UNION test with a NULL column](../assets/SQL%20Injection/Lab%2002%20-%20UNION%20Retrieve%20Interesting%20Data/step-01-union-null-column-test.png)
+
+![Adding a second NULL value to match the query columns](../assets/SQL%20Injection/Lab%2002%20-%20UNION%20Retrieve%20Interesting%20Data/step-02-add-second-null-column.png)
+
 3. Determine which columns contain text data, using a payload like the following in the category parameter:  
 
 ``
  '+UNION+SELECT+NULL,'abc'-- 
  ``  
+
+![Testing which UNION column accepts text](../assets/SQL%20Injection/Lab%2002%20-%20UNION%20Retrieve%20Interesting%20Data/step-03-test-text-column.png)
 
 4. Use the following payload to retrieve the contents of the users table:  
 
@@ -24,9 +30,19 @@ perform a SQL injection UNION attack that retrieves all usernames and passwords,
 '+UNION+SELECT+username,+password+FROM+users--
 ``  
 
+![Retrieving usernames and passwords from the users table](../assets/SQL%20Injection/Lab%2002%20-%20UNION%20Retrieve%20Interesting%20Data/step-04-query-users-table.png)
+
 5. Verify that the application's response contains usernames and passwords.
 
+![Administrator credentials appear in the results](../assets/SQL%20Injection/Lab%2002%20-%20UNION%20Retrieve%20Interesting%20Data/step-05-administrator-credentials.png)
+
+![The response displays the retrieved account data](../assets/SQL%20Injection/Lab%2002%20-%20UNION%20Retrieve%20Interesting%20Data/step-06-credentials-in-response.png)
+
 6. login as an administrator user, using the data you retrive from the previous step.
+
+![Entering the administrator credentials](../assets/SQL%20Injection/Lab%2002%20-%20UNION%20Retrieve%20Interesting%20Data/step-07-administrator-login.png)
+
+![Administrator login succeeds](../assets/SQL%20Injection/Lab%2002%20-%20UNION%20Retrieve%20Interesting%20Data/step-08-lab-solved.png)
 
 ## A bit of theory  
 When an application is vulnerable to SQL injection, and the results of the query are returned within the application's responses, you can use the UNION keyword to retrieve data from other tables within the database. This is commonly known as a SQL injection UNION attack.
@@ -86,4 +102,3 @@ Once we found the right number of columns with the interested data type we can p
 ## Result
 ✅ Unautherized login as any eligible user.  
 ✅ Lab solved successfully
-

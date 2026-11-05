@@ -1,4 +1,4 @@
-# Lab 03: Examining the database in SQL injection attacks
+# Lab 04: Examining the database in SQL injection attacks
 
 ## Category
 SQL Injection - Union Attack
@@ -18,6 +18,8 @@ perform a SQL injection UNION attack to identify the database version string.
 ``  
 '+UNION+SELECT+@@version,+'abc'-- 
 ``  
+
+![The UNION query displays the database version and type](../assets/SQL%20Injection/Lab%2004%20-%20Retrieve%20Database%20Version%20and%20Type/step-01-database-version-and-type.png)
 
 ## A bit of theory  
 To exploit SQL injection vulnerabilities, it's often necessary to find information about the database. This includes:
@@ -56,4 +58,3 @@ That would give us a result such as what we got in this lab.
 ## Result
 ✅ Retrieve the type and version of the database software.  
 ✅ Lab solved successfully
-

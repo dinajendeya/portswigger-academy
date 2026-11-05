@@ -6,11 +6,11 @@
 
 ![Focus](https://img.shields.io/badge/focus-web%20application%20security-red)
 ![Platform](https://img.shields.io/badge/platform-PortSwigger%20Academy-orange)
-![Labs](https://img.shields.io/badge/labs%20solved-0%2F60-blue)
+![Labs](https://img.shields.io/badge/labs%20solved-16%2F60-blue)
 ![Status](https://img.shields.io/badge/status-actively%20learning-brightgreen)
 ![Studying](https://img.shields.io/badge/studying-Security%2B%20%7C%20CCNA-lightgrey)
 
-[About Me](#-about-me) · [Why This Repo](#-why-this-repository) · [Structure](#-repository-structure) · [Template](#-walkthrough-template) · [Progress](#-progress-tracker) · [Connect](#-connect-with-me)
+[Why This Repo](#-why-this-repository) · [Structure](#-repository-structure) · [SQLi Labs](./SQLi/README.md) · [Template](#-walkthrough-template) · [Progress](#-progress-tracker) · [Connect](#-connect-with-me)
 
 </div>
 
@@ -21,18 +21,7 @@
 This repository is my knowledge base and progress tracker for the [PortSwigger Web Security Academy](https://portswigger.net/web-security).
 For every lab I solve, I write down **how I approached it, what I got wrong, what I learned, and how a developer would fix it**.
 
-I'm not here to show off a finished skill set. I'm here to build one, in the open, with discipline and consistency.
-
-## 🙋 About Me
-
-I'm **Dina**, a **Software Engineer** from **Gaza**, graduating with a **GPA of 90.66**.
-My focus is **cybersecurity**, especially **web application security and penetration testing**.
-
-Right now I'm:
-
-- 🧪 Practising hands-on on **TryHackMe**, **OverTheWire** and **PortSwigger Academy**
-- 🛠️ Building backend projects, so I understand how the things I'm learning to break are actually built
-- ✍️ Documenting what I learn, because explaining something is the fastest way to find out whether I really understand it
+I'm not here to show off a finished skill set. I'm here to build one.
 
 ## 💡 Why This Repository?
 
@@ -69,19 +58,18 @@ portswigger-writeups/
 ├── README.md
 ├── templates/
 │   └── walkthrough-template.md
-├── sql-injection/
-│   ├── README.md                 # category overview + lessons learned
-│   └── 01-where-clause-hidden-data.md
+├── SQLi/
+│   ├── README.md                 # SQLi overview, lab references, and lessons learned
+│   └── Lab01–Lab10-*.md          # selected SQL injection lab walkthroughs
 ├── authentication/
 ├── access-control/
 ├── csrf/
 ├── xss/
 ├── jwt/
 ├── ssrf/
-├── file-upload/
+├── assets/
 ├── business-logic/
 ├── race-conditions/
-└── resources/                    # cheat sheets, tool notes, reading list
 ```
 
 Each category folder has its own `README.md` with the big-picture lessons, and one file per lab.
@@ -92,7 +80,7 @@ File names follow `NN-short-lab-name.md`.
 
 | Week | Focus | Labs | Links |
 |---|---|:---:|---|
-| 1 | SQL injection | 8 |  |
+| 1 | SQL injection | ~16 solved; 10 selected write-ups | [SQLi overview](./SQLi/README.md) |
 
 
 ## 📚 Resources I Use
@@ -122,4 +110,3 @@ Found a mistake in one of my write-ups? Please open an issue. Correcting me is a
 
 
 *I'm still learning, and I'm sharing the journey as it happens. Thanks for stopping by, and feel free to follow along.* ⭐
-

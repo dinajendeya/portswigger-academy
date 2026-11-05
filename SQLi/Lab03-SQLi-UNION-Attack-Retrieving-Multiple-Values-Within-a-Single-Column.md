@@ -18,6 +18,10 @@ perform a SQL injection UNION attack that retrieves all usernames and passwords 
  '+UNION+SELECT+NULL,'abc'-- 
  ``  
 
+![The second UNION column accepts a text value](../assets/SQL%20Injection/Lab%2003%20-%20UNION%20Multiple%20Values%20in%20One%20Column/step-01-text-column-check.png)
+
+![The first column does not accept the text value](../assets/SQL%20Injection/Lab%2003%20-%20UNION%20Multiple%20Values%20in%20One%20Column/step-02-first-column-type-check.png)
+
 4. Use the following payload to retrieve the contents of the users table:  
 
 ``
@@ -27,6 +31,10 @@ perform a SQL injection UNION attack that retrieves all usernames and passwords 
 5. Verify that the application's response contains usernames and passwords.
 
 6. login as an administrator user, using the data you retrive from the previous step.
+
+![The combined query returns the administrator details](../assets/SQL%20Injection/Lab%2003%20-%20UNION%20Multiple%20Values%20in%20One%20Column/step-03-retrieve-user-and-password.png)
+
+![Administrator login succeeds](../assets/SQL%20Injection/Lab%2003%20-%20UNION%20Multiple%20Values%20in%20One%20Column/step-04-administrator-login-success.png)
 
 
 ## A bit of theory  
@@ -56,4 +64,3 @@ Different databases use different syntax to perform string concatenation.
 ## Result
 ✅ Unautherized login as any eligible user.  
 ✅ Lab solved successfully
-
