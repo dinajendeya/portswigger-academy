@@ -36,6 +36,7 @@ These are my learning notes, not a list of payloads to copy blindly. Each walkth
 | Lab 08 | Visible errors that reveal query data | [Read my notes](./Lab08-SQLi-Visible-Error-Based.md) | [SQL injection](https://portswigger.net/web-security/sql-injection) |
 | Lab 09 | Blind SQLi using time delays | [Read my notes](./Lab09-SQL-Injection-Time-Delay.md) | [Time delays lab](https://portswigger.net/web-security/sql-injection/blind/lab-time-delays) |
 | Lab 10 | XML filter bypass and `UNION` | [Read my notes](./Lab10-SQL-Injection-XML-Filter-Bypass.md) | [XML encoding filter-bypass lab](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding) |
+| Prevention | Parameterized Queries and Whitelisting | [Read my notes](./How-to-Prevent-SQLi.md) | [SQL injection prevention](https://portswigger.net/web-security/sql-injection#how-to-prevent-sql-injection) |
 
 The walkthroughs include screenshots placed beside the steps they explain. Each write-up also has its own explanation of the result and what I learned.
 
